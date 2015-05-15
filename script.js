@@ -1,6 +1,25 @@
 board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 results = []
+score = [0, 0, 0]
+// still playing?
+inGame = 1
+function initGame()
+{
+  setMsg("Welcome");
+  newGame();
+}
 
+function newGame()
+{
+  resetBoard()
+  setMsg("Your turn");
+  inGame = 1
+}
+
+function setMsg(msg)
+{
+  document.getElementById("msg").innerHTML = msg;
+}
 // 0 = Human won
 // 1 = Computor won
 // 2 = draw
@@ -92,8 +111,9 @@ function finish(i) {
   } else {
     msg = "A draw!"
   }
-  alert(msg)
-  resetBoard()
+  setMsg(msg)
+  recordScore()
+  inGame = 0
 }
 // 0 = Human
 // 1 = PC
@@ -119,6 +139,9 @@ function getButton(x) {
 }
 
 function tileClicked(x) {
+  if (!inGame) {
+    return
+  }
   if (flip(x, 0)) {
     if(isFinished() != -1) {
       finish(isFinished())
@@ -144,9 +167,17 @@ function AIperformTurn() {
   }
 }
 
-function resetBoard() {
-  var completeGame = [isFinished(), board]
+function recordScore() {
+  var outcome = isFinished()
+  var completeGame = [outcome, board]
   results.push(completeGame)
+  score[outcome]++
+  document.getElementById("humanScore").innerHTML = score[0];
+  document.getElementById("pcScore").innerHTML = score[1];
+  document.getElementById("drawScore").innerHTML = score[2];
+}
+
+function resetBoard() {
   board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
   for (var i = 0; i < 9; i++) {
     getButton(i+1).value = " "
@@ -171,14 +202,17 @@ function takeMove() {
       });
       var max_value = 0
       var max_index = 0
-      for (var i = 0; i < board.length; i++) {
-          if (tally[i] > max_value && board[i] == 0) {
-              max_index = i
-              max_value = tally[i]
-          }
+      var i = 0
+      for (i = 0; i < board.length; i++) {
+        // || board[max_index] != 0 is to
+        // make sure max_index points to an empty field
+        if ((tally[i] > max_value || board[max_index] != 0) && board[i] == 0) {
+            max_index = i
+            max_value = tally[i]
+        }
       }
-      var ret = flip(max_index, 1)
-      //board[max_index] = "O";
+      var ret = flip(max_index+1, 1)
+
       if(isFinished() != -1) {
         finish(isFinished())
       }

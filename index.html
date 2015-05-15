@@ -3,22 +3,31 @@
 		<link rel= "stylesheet" href = "style.css" type = "text/css" media = screen>
 		<script src="script.js"></script>
 	</head>
-	<body>
+	<body onLoad="initGame()">
 		<div class = "box">
-			<h1> TicTacToe </h1>
 			<div class = "tiles">
-				<p><input type = "button" class = "tile" value = " " onclick = 'tileClicked(1)' id = 1>
-					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(2)' id = 2>
-					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(3)' id = 3>
+				<p><h1> TicTacToe </h1>
+					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(1)' id = "1">
+					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(2)' id = "2">
+					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(3)' id = "3">
 
-				<p><input type = "button" class = "tile" value = " " onclick = 'tileClicked(4)' id = 4>
-					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(5)' id = 5>
-					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(6)' id = 6>
+				<p><input type = "button" class = "tile" value = " " onclick = 'tileClicked(4)' id = "4">
+					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(5)' id = "5">
+					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(6)' id = "6">
 
-				<p><input type = "button" class = "tile" value = " " onclick = 'tileClicked(7)' id = 7>
-					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(8)' id = 8>
-				   <input type = "button" class = "tile" value = " " onclick = 'tileClicked(9)' id = 9>
+				<p><input type = "button" class = "tile" value = " " onclick = 'tileClicked(7)' id = "7">
+					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(8)' id = "8">
+				   <input type = "button" class = "tile" value = " " onclick = 'tileClicked(9)' id = "9">
 			</div>
+			<input type="button" style="width: 250px; height:50px" value="New Game" onClick="newGame()">
+			<div id="msg" style="color:red; font-size:200%;">Your turn!</div>
+			<h2>Score</h2>
+			Human:
+			<div id="humanScore">0</div>
+			Computer:
+			<div id="pcScore">0</div>
+			Draws:
+			<div id="drawScore">0</div>
 		</div>
 	</body>
 </html>

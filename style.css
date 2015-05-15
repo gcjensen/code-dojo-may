@@ -1,0 +1,28 @@
+body {
+  background-color:white;
+}
+
+.box {
+  background-color:white;
+  height:300px;
+  width:250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tiles {
+  width:400px;
+}
+
+.tile {
+  width:87px;
+  height:84px;
+  border:none;
+  border-radius:4px;
+  margin-left:5px;
+  cursor:pointer;
+  font-size:45px;
+  color:#686868;
+  background-color:#E0E0E0;
+  border:#AAAAAA 2px solid;
+}

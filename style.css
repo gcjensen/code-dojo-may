@@ -3,7 +3,16 @@ body {
 }
 
 h1 {
+  position: relative;
+  top: 10px;
   font-size:45px;
+  color:#686868;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-size:20px;
   color:#686868;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -18,7 +27,7 @@ h1 {
 }
 
 .tiles {
-  width:400px;
+  width:290;
   position: relative;
   top: -15px;
 }
@@ -28,12 +37,39 @@ h1 {
   height:84px;
   border:none;
   border-radius:4px;
-  margin-left:5px;
   cursor:pointer;
   font-size:45px;
   color:#686868;
   background-color:#E0E0E0;
   border:#AAAAAA 2px solid;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.button {
+  position: relative;
+  top: -10px;
+  width: 270px;
+  height: 30px;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  color:#686868;
+  background-color:#E0E0E0;
+  border:#AAAAAA 1px solid;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.message {
+  font-size:30px;
+  color:#686868;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+.scores {
+  font-size:16px;
+  color:#686868;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }

@@ -19,15 +19,17 @@
 					 <input type = "button" class = "tile" value = " " onclick = 'tileClicked(8)' id = "8">
 				   <input type = "button" class = "tile" value = " " onclick = 'tileClicked(9)' id = "9">
 			</div>
-			<input type="button" style="width: 250px; height:50px" value="New Game" onClick="newGame()">
-			<div id="msg" style="color:red; font-size:200%;">Your turn!</div>
+			<input type = "button" class = "button" value = "New Game" onClick = "newGame()">
+			<div class = "message" id="msg">Your turn!</div>
 			<h2>Score</h2>
-			Human:
-			<div id="humanScore">0</div>
-			Computer:
-			<div id="pcScore">0</div>
-			Draws:
-			<div id="drawScore">0</div>
+			<div class = "scores">
+				Human:
+				<div id = "humanScore">0</div>
+				Computer:
+				<div id = "pcScore">0</div>
+				Draws:
+				<div id = "drawScore">0</div>
+			</div>
 		</div>
 	</body>
 </html>

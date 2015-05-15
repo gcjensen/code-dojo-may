@@ -171,8 +171,7 @@ function takeMove() {
       });
       var max_value = 0
       var max_index = 0
-      var i = 0
-      for (i = 0; i < board.length; i++) {
+      for (var i = 0; i < board.length; i++) {
           if (tally[i] > max_value && board[i] == 0) {
               max_index = i
               max_value = tally[i]

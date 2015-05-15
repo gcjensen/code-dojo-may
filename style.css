@@ -2,6 +2,13 @@ body {
   background-color:white;
 }
 
+h1 {
+  font-size:45px;
+  color:#686868;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
 .box {
   background-color:white;
   height:300px;
@@ -25,4 +32,6 @@ body {
   color:#686868;
   background-color:#E0E0E0;
   border:#AAAAAA 2px solid;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
 }

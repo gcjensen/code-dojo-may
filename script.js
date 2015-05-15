@@ -104,9 +104,11 @@ function flip(x, who) {
   button = getButton(x);
   if(who) {
     button.value = "O"
+    button.style.background="#f6c8c9"
     board[x-1] = "O"
   } else {
     button.value = "X"
+    button.style.background="#bdcfea"
     board[x-1] = "X"
   }
   return true
@@ -148,8 +150,8 @@ function resetBoard() {
   board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
   for (var i = 0; i < 9; i++) {
     getButton(i+1).value = " "
+    getButton(i+1).style.background="#E0E0E0"
   }
-  alert(results.length)
 }
 
 function takeMove() {
@@ -160,26 +162,26 @@ function takeMove() {
       results.forEach(function(result) {
           for (var i = 0; i < result[1].length; i++) {
               if (result[0] == 1 && result[1][i] == "O") {
-                  tally[i] += 1;
+                  tally[i] += 1
               }
               else if (result[0] == 0 && result[1][i] == "X") {
-                  tally[i] += 1;
+                  tally[i] += 1
               }
           }
       });
-      var max_value = 0;
-      var max_index = 0;
-      var i = 0;
+      var max_value = 0
+      var max_index = 0
+      var i = 0
       for (i = 0; i < board.length; i++) {
           if (tally[i] > max_value && board[i] == 0) {
-              max_index = i;
-              max_value = tally[i];
+              max_index = i
+              max_value = tally[i]
           }
       }
       var ret = flip(max_index, 1)
       //board[max_index] = "O";
       if(isFinished() != -1) {
-        finish(isFinished());
+        finish(isFinished())
       }
     }
 }

@@ -86,7 +86,7 @@ function isFinished() {
 function finish(i) {
   msg = ""
   if(i == 0) {
-    msg = "You won, congrats!"
+    msg = "You win, congrats!"
   } else if(i == 1) {
     msg = "I won!"
   } else {
